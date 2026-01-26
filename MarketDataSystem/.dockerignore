@@ -1,0 +1,22 @@
+# Build artifacts
+build/
+bin/
+libs/
+
+# Version control
+.git/
+.gitignore
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.DS_Store
+
+# Logs
+*.log
+
+# Docker
+docker-compose.yaml
+Dockerfile
+ManualBuild.sh

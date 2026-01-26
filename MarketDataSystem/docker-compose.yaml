@@ -1,0 +1,30 @@
+
+
+services:
+  publisher:
+    build: .
+    container_name: market_publisher
+    command: ./build/publisher
+    ipc: host
+    network_mode: host
+    restart: unless-stopped
+
+  consumer_shm:
+    build: .
+    container_name: market_consumer_shm
+    command: ./build/consumer_shm
+    ipc: host
+    network_mode: host
+    depends_on:
+      - publisher
+    restart: unless-stopped
+
+  consumer_tcp:
+    build: .
+    container_name: market_consumer_tcp
+    command: ./build/consumer_tcp
+    ipc: host
+    network_mode: host
+    depends_on:
+      - publisher
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+# Build directories
+build/
+bin/
+lib/
+libs/
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.DS_Store
+
+# Logs
+*.log
+
